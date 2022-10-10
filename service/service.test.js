@@ -1,5 +1,7 @@
 const {service, serviceId} = require ('../service/service')
 
+jest.mock('./service');
+
 describe('Testing Service', () => {
     test('Testing Service ', async () => {;
         const result = await service();
@@ -9,7 +11,7 @@ describe('Testing Service', () => {
     
     test('Testing Service by Id', async () => {
         const result = await serviceId(32789);
-        expect(result.data.places).toEqual([{"latitude": "28.5978", "longitude": "-81.3534", "place name": "Winter Park", "state": "Florida", "state abbreviation": "FL"}])
+        expect(result.data.places).toEqual({"latitude": "28.5978", "longitude": "-81.3534", "place name": "Winter Park", "state": "Florida", "state abbreviation": "FL"})
     })
 });
 

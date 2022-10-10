@@ -8,7 +8,7 @@ const service = async() =>{
 }
 
 const serviceId = async(id) =>{
-    console.log("Real Todos By ID");
+    console.log("Real Service By ID");
     return await axios.get(`${process.env.URL}${id}`)
 };
 
