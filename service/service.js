@@ -1,6 +1,7 @@
 const axios = require('axios');
 require("dotenv").config();
 
+
 const service = async() =>{
     console.log("Real Service");
     return await axios.get(`${process.env.URL}`)
